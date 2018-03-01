@@ -1,8 +1,12 @@
 body{
     text-align: center;
     font-family: cursive;
-    background: #c9c5c7;
+    background-image: url("http://www.2fons.ru/download.php?file=201406/2560x1440/2fons.ru-28556.jpg");
     font-size: 1.2em;
+}
+
+header{
+    background-image: url("http://compoboi.pw/_ph/29/762856685.jpg");
 }
 
 #map{
@@ -10,13 +14,19 @@ body{
     width: 500px;
     height: 500px;
     border: 5px solid blue;
-    margin: 40px 32%;
+    margin: 10px 32%;
 }
 
-#start{
+button{
     border-radius: 13px;
     background: green;
     border: 2px solid white;
     font-size: 1.2em;
     font-family: cursive;
+}
+
+p{
+    font-family: cursive;
+    color: white;
+    font-size: 1.2em;
 }
