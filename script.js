@@ -1,5 +1,5 @@
-var canvas = document.getElementById('map');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("map");
+var ctx = canvas.getContext("2d");
 
 var mas = [];
 var count = 0;
@@ -54,17 +54,17 @@ function startLife(){
     for (var i=0; i<50; i++){
             mas2[i]=[];
                 for (var j=0; j<50; j++){
-                    var neighbors = 0;
-                    if(mas[fpm(i)-1][j]==1) {neighbors++;}//up
-                    if(mas[i][fpp(j)+1]==1) {neighbors++;}//right
-                    if(mas[fpp(i)+1][j]==1) {neighbors++;}//bottom
-                    if(mas[i][fpm(j)-1]==1) {neighbors++;}//left
-                    if(mas[fpm(i)-1][fpp(j)+1]==1) {neighbors++;}
-                    if(mas[fpp(i)+1][fpp(j)+1]==1) {neighbors++;}
-                    if(mas[fpp(i)+1][fpm(j)-1]==1) {neighbors++;}
-                    if(mas[fpm(i)-1][fpm(j)-1]==1) {neighbors++;}
+                    var pixel = 0;
+                    if(mas[fpm(i)-1][j]==1) {pixel++;}//up
+                    if(mas[i][fpp(j)+1]==1) {pixel++;}//right
+                    if(mas[fpp(i)+1][j]==1) {pixel++;}//bottom
+                    if(mas[i][fpm(j)-1]==1) {pixel++;}//left
+                    if(mas[fpm(i)-1][fpp(j)+1]==1) {pixel++;}
+                    if(mas[fpp(i)+1][fpp(j)+1]==1) {pixel++;}
+                    if(mas[fpp(i)+1][fpm(j)-1]==1) {pixel++;}
+                    if(mas[fpm(i)-1][fpm(j)-1]==1) {pixel++;}
                     
-                    if(neighbors==2 || neighbors==3) {mas2[i][j]=1;}
+                    if(pixel==2 || pixel==3) {mas2[i][j]=1;}
                     else {mas2[i][j]=0;}
                 }
         }
@@ -73,7 +73,7 @@ function startLife(){
     drawField();
     
     count++;
-    document.getElementById('count').innerHTML = count;
+    document.getElementById("count").innerHTML = count;
     
     timer = setTimeout(startLife, 200);
 }

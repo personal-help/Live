@@ -10,11 +10,11 @@ header{
 }
 
 #map{
-    display: block;
+    display: flex;
     width: 500px;
     height: 500px;
-    border: 5px solid blue;
-    margin: 10px 32%;
+    border: 7px solid blue;
+    margin: 10px 31%;
 }
 
 button{
